@@ -10,10 +10,11 @@ import winsound
 import math                            
 import random                             
 #set up screen                                         
-wn= turtle.Screen()                                
+wn= turtle.Screen()                             
 wn.bgcolor("black")                                
 wn.title("Space invaders")                              
-wn.bgpic("Space_invaders_background.gif")   
+wn.bgpic("Space_invaders_background.gif")   #cambia el background a bg.gif y pruebalo
+
 #Register the shapes
 turtle.register_shape("invader.gif") #this is pic.of invader  
 turtle.register_shape("player.gif")  # this is pic.of player 
@@ -68,7 +69,7 @@ for i in range(number_of_enemies):
     enemies.append(turtle.Turtle())
 for enemy in enemies:
     enemy.color("red")
-    enemy.shape("invader.gif")
+    #enemy.shape("invader.gif")  #si lo descomentas obtienes el invader
     enemy.shapesize(2, 2)
     enemy.penup()
     enemy.speed(0)
