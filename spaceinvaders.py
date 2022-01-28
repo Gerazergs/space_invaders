@@ -68,8 +68,8 @@ for i in range(number_of_enemies):
     enemies.append(turtle.Turtle())
 for enemy in enemies:
     enemy.color("red")
-    enemy.shape("circle")
-    enemy.shapesize(1,1)
+    enemy.shape("invader.gif")
+    enemy.shapesize(2, 2)
     enemy.penup()
     enemy.speed(0)
     x= random.randint(-200,200)
@@ -124,7 +124,7 @@ def fire_bullet():
 
 def isCollision(t1,t2):
     distance = math.sqrt(math.pow(t1.xcor()-t2.xcor(),2)+math.pow(t1.ycor()-t2.ycor(),2))
-    if distance < 5:
+    if distance < 50:
         return True
     else:
         return False
